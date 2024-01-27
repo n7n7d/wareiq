@@ -44,7 +44,6 @@ def send_email(data):
     html_content = data.get('template')
     html_part = MIMEText(html_content, "html")
     message.attach(html_part)
-
     try:
         server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         server.login(sender_email, password)
